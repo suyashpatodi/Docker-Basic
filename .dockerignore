@@ -1,0 +1,10 @@
+# This file is used to ignore any file that we do not want to push in image
+
+# It will ingore the entire folder as we are already using run npm install in dockerfile folder
+node_modules
+
+# It will only ignore this particular file. We need to give relative path of the file.
+# dummy.txt 
+
+# If we want to ignore all the files with extension txt
+*.txt

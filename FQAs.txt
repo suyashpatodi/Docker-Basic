@@ -1,0 +1,19 @@
+Q- Why docker?
+    A- When we deploy our application on server. Server might try to download the latest versions of packages but it is possible that our application works with certain version. 
+        Or if a person wants to run the application is his system and the version pf package is not compatible with his system's version. 
+        To overcome this scenario we create image of our application with certain package versions and those images are used to create container and can be used for executing. 
+        The container created does not care about the version of packages in system.
+
+Q- What are base images and why we need them?
+    A- Base images are images of packages that we use to run our application.
+       Like for a React js aaplication we need node. So we just pull the base image and then create image for our project. they are like pre-requisites.
+       This base images can be downloaded from either docker hub or directly in docker desktop. 
+
+Q- Why do we create versions of images rather than just creating new image?
+    A- It is also an option but to keep things easier to understand we create version. By version we can just get the latest version and create container for it. 
+       And we do not have to remember the names of the container.
+
+Q- What are volumne and why we use them?
+    A- Container only store temp data and any change in code is not reflected in the running contaoner. We need to create a new image and container to reflect those changes.
+       To overcome this problem we use volumes. Voulmes are used for data persistence  and sharing. One volume can be shared between multiple containers.
+       Data in volumes is not lost when the container stops, is removed, or is updated.
